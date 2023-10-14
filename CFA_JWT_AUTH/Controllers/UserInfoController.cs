@@ -25,12 +25,12 @@ namespace CFA_JWT_AUTH.Controllers
         {
             try
             {
-                    if (!HttpContext.User.Identity.IsAuthenticated)
-                    {
-                        return StatusCode(404, "Resources not found.");
-                    }
-                     var userinfo = await _user.GetUserDetails();
-                    return Ok(userinfo);
+                if (!HttpContext.User.Identity.IsAuthenticated)
+                {
+                    return StatusCode(404, "Resources not found.");
+                }
+                var userinfo = await _user.GetUserDetails();
+                return Ok(userinfo);
             }
             catch (Exception)
             {
