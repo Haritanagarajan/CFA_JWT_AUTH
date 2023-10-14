@@ -10,7 +10,6 @@ namespace CFA_JWT_AUTH.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Authorize]
-
     public class AuthUserInfoController : ControllerBase
     {
         private readonly UserDbContext _context;
@@ -20,9 +19,7 @@ namespace CFA_JWT_AUTH.Controllers
             _user = user;
             _context = context;
         }
-
         [HttpGet]
-
         public async Task<ActionResult<IEnumerable<UserDetailsModel>>> GetUserDetails()
         {
             try

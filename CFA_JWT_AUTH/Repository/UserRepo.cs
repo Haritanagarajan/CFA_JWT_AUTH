@@ -42,7 +42,6 @@ namespace CFA_JWT_AUTH.Repository
             var delete = await _context.UserDetails.FindAsync(id);
             _context.UserDetails.Remove(delete);
             await _context.SaveChangesAsync();
-        }
-        
+        }  
     }
 }

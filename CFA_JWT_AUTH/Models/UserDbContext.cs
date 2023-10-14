@@ -7,7 +7,6 @@ namespace CFA_JWT_AUTH.Models
         public UserDbContext(DbContextOptions<UserDbContext> options) : base(options)
         {
         }
-
         public DbSet<UserDetailsModel> UserDetails { get; set; }
     }
 }

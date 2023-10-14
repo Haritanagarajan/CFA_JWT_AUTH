@@ -20,7 +20,6 @@ namespace CFA_JWT_AUTH.Controllers
         {
             _context = context;
         }
-
         [HttpPost]
         public async Task<ActionResult<UserDetailsModel>> UserSignin([FromForm] SigninModel signin)
         {
@@ -64,7 +63,6 @@ namespace CFA_JWT_AUTH.Controllers
 
             }
         }
-
         [HttpPost("getToken")]
         public IActionResult TokenGenerate([FromBody] SigninModel user)
         {

@@ -19,7 +19,6 @@ namespace CFA_JWT_AUTH.Controllers
             _user = user;
             _context = context;
         }
-
         [HttpGet]
         public async Task<ActionResult<IEnumerable<UserDetailsModel>>> GetUserDetails()
         {
