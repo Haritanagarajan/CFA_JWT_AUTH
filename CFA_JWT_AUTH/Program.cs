@@ -1,10 +1,10 @@
-using CFA_JWT_AUTH.IRepository;
-using CFA_JWT_AUTH.Models;
-using CFA_JWT_AUTH.Repository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using UserManagement.Data.Models;
+using UserManagement.Data.Repository;
+using UserManagement.Data.IRepository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -37,7 +37,7 @@ builder.Services.AddDbContext<UserDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("mvcConnection")));
 
 //dependency injection
-builder.Services.AddScoped<IUser,UserRepo>();
+builder.Services.AddScoped<IUser,UserManagementRepo>();
 
 var app = builder.Build();
 //jwt

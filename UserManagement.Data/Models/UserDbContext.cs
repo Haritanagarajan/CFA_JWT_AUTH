@@ -1,6 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using UserManagement.Data.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace CFA_JWT_AUTH.Models
+namespace  UserManagement.Data.Models
+
 {
     public class UserDbContext : DbContext
     {

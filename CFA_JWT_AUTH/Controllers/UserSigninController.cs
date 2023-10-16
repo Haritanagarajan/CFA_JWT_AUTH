@@ -1,6 +1,5 @@
 ﻿using Azure;
-using CFA_JWT_AUTH.IRepository;
-using CFA_JWT_AUTH.Models;
+using UserManagement.Data.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -30,7 +29,7 @@ namespace CFA_JWT_AUTH.Controllers
 
                 if (user != null)
                 {
-                    var response = new Models.SigninModel
+                    var response = new UserManagement.Data.Models.SigninModel
                     {
                         UserName = signin.UserName,
                         UserEmail = signin.UserEmail,
@@ -42,7 +41,7 @@ namespace CFA_JWT_AUTH.Controllers
                     {
                         string? jwt = okObjectResult.Value?.ToString();
 
-                        var SigninDetails = new Models.LoginDetails
+                        var SigninDetails = new UserManagement.Data.Models.LoginDetails
                         {
                             UserName = response.UserName,
                             UserEmail = response.UserEmail,

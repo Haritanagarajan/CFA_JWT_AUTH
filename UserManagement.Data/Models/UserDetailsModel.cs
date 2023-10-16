@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CFA_JWT_AUTH.Models
+namespace UserManagement.Data.Models
+
 {
     public class UserDetailsModel
     {

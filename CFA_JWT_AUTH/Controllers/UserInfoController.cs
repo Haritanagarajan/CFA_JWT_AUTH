@@ -1,12 +1,13 @@
-﻿using CFA_JWT_AUTH.IRepository;
-using CFA_JWT_AUTH.Models;
+﻿using CFA_API.CustomAuthorize;
 using Google.Apis.Admin.Directory.directory_v1.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using System.Security.Principal;
+using UserManagement.Data.IRepository;
+using UserManagement.Data.Models;
 
-namespace CFA_JWT_AUTH.Controllers
+namespace CFA_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -20,14 +21,12 @@ namespace CFA_JWT_AUTH.Controllers
             _context = context;
         }
         [HttpGet]
+        [Block]
         public async Task<ActionResult<IEnumerable<UserDetailsModel>>> GetUserDetails()
         {
             try
             {
-                if (!HttpContext.User.Identity.IsAuthenticated)
-                {
-                    return StatusCode(404, "Resources not found.");
-                }
+               
                 var userinfo = await _user.GetUserDetails();
                 return Ok(userinfo);
             }

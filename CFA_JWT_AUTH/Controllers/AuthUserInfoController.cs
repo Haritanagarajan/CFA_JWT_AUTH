@@ -1,11 +1,11 @@
-﻿using CFA_JWT_AUTH.IRepository;
-using CFA_JWT_AUTH.Models;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using UserManagement.Data.IRepository;
+using UserManagement.Data.Models;
 
-namespace CFA_JWT_AUTH.Controllers
+namespace CFA_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

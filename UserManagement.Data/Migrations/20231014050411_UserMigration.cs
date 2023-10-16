@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace CFA_JWT_AUTH.Migrations
+namespace UserManagement.Data.Migrations
 {
     /// <inheritdoc />
     public partial class UserMigration : Migration

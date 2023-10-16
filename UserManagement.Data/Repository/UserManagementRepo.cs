@@ -1,16 +1,20 @@
 ﻿#nullable disable
-using CFA_JWT_AUTH.IRepository;
-using CFA_JWT_AUTH.Models;
-using Microsoft.AspNetCore.Cors.Infrastructure;
-using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using UserManagement.Data.IRepository;
+using UserManagement.Data.Models;
 
-namespace CFA_JWT_AUTH.Repository
+namespace UserManagement.Data.Repository
 {
-    public class UserRepo : IUser
+    public class UserManagementRepo : IUser
     {
         private readonly UserDbContext _context;
-        public UserRepo(UserDbContext context)
+
+        public UserManagementRepo(UserDbContext context)
         {
             _context = context;
         }
@@ -27,12 +31,12 @@ namespace CFA_JWT_AUTH.Repository
             }
             return new List<UserDetailsModel>();
         }
-        public async Task PutUserDetailsModel(int id, [FromForm] UserDetailsModel userDetailsModel)
+        public async Task PutUserDetailsModel(int id,  UserDetailsModel userDetailsModel)
         {
             _context.Entry(userDetailsModel).State = EntityState.Modified;
             await _context.SaveChangesAsync();
         }
-        public async Task PostUserDetailsModel([FromForm] UserDetailsModel userDetailsModel)
+        public async Task PostUserDetailsModel( UserDetailsModel userDetailsModel)
         {
             _context.UserDetails.Add(userDetailsModel);
             await _context.SaveChangesAsync();
@@ -42,6 +46,7 @@ namespace CFA_JWT_AUTH.Repository
             var delete = await _context.UserDetails.FindAsync(id);
             _context.UserDetails.Remove(delete);
             await _context.SaveChangesAsync();
-        }  
+        }
     }
 }
+

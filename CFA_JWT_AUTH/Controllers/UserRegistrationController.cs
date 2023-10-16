@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using CFA_JWT_AUTH.Models;
-using CFA_JWT_AUTH.IRepository;
+using UserManagement.Data.IRepository;
+using UserManagement.Data.Models;
 
 namespace CFA_JWT_AUTH.Controllers
 {

@@ -1,4 +1,4 @@
-﻿namespace CFA_JWT_AUTH.Models
+﻿namespace UserManagement.Data.Models
 {
     public class LoginDetails
     {
