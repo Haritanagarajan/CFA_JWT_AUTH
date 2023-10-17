@@ -20,8 +20,8 @@ namespace CFA_API.Controllers
             _user = user;
             _context = context;
         }
-        [HttpGet]
         [Block]
+        [HttpGet]
         public async Task<ActionResult<IEnumerable<UserDetailsModel>>> GetUserDetails()
         {
             try
