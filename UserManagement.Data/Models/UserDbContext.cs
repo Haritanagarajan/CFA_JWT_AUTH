@@ -10,7 +10,6 @@ namespace  UserManagement.Data.Models
         {
         }
         public DbSet<UserDetailsModel> UserDetails { get; set; }
-        public DbSet<UserManagement> UserManagement { get; set; }
 
     }
 }

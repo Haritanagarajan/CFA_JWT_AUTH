@@ -52,21 +52,7 @@ namespace CFA_JWT_AUTH.Migrations
                     b.ToTable("UserDetails");
                 });
 
-            modelBuilder.Entity("UserManagement.Data.Models.UserManagement", b =>
-                {
-                    b.Property<int>("RoleId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RoleId"));
-
-                    b.Property<string>("RoleName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("RoleId");
-
-                    b.ToTable("UserManagement");
-                });
+           
 #pragma warning restore 612, 618
         }
     }

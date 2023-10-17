@@ -10,7 +10,7 @@ using UserManagement.Data.Models;
 
 namespace UserManagement.Data.Repository
 {
-    public class UserManagementRepo : IUser
+    public  class UserManagementRepo : IUser
     {
         private readonly UserDbContext _context;
 
