@@ -20,6 +20,7 @@ namespace CFA_API.CustomAuthorize
                 context.Result = new StatusCodeResult(StatusCodes.Status404NotFound);
 
             }
+            
         }
     }
 }

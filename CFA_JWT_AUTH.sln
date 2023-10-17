@@ -5,9 +5,9 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CFA_API", "CFA_JWT_AUTH\CFA_API.csproj", "{FBE88C34-3309-431C-AA61-624D7FBCB450}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserManagement.Data", "UserManagement.Data\UserManagement.Data.csproj", "{A1DA789A-990B-4E9C-89CC-E4C47CEFF3AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserManagement.Data", "UserManagement.Data\UserManagement.Data.csproj", "{A1DA789A-990B-4E9C-89CC-E4C47CEFF3AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserManagement.Business", "UserManagement.Business\UserManagement.Business.csproj", "{46E7B1A3-D45A-4460-BC69-E8DD7E95CE6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserManagement.Business", "UserManagement.Business\UserManagement.Business.csproj", "{46E7B1A3-D45A-4460-BC69-E8DD7E95CE6B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
